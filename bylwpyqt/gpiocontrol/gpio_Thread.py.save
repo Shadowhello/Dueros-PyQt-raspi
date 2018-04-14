@@ -1,0 +1,35 @@
+ enable = alllib.cmdflagfrom PyQt5 import QtCore,QtGui
+import time
+import os
+import sys
+import numpy as np 
+import globallob.alllib as alllib
+try:
+    import RPi.GPIO as GPIO
+except RuntimeError:
+    print("Error importting Rpi.GPIO")
+#这个线程是为了独立控制GPIO口而设计，根据接受到的信息来判断控制哪一个GPIO
+class gpio_Thread(QtCore.QThread):
+
+    def __init__(self,parent=None):
+        super(gpio_Thread,self).__init__(parent)
+
+    sinout = QtCore.pyqtSignal(str)
+    def run(self):
+
+        if enable==1:
+            enable = alllib.cmdflag
+            channel = 26
+            GPIO.setmode(GPIO.BCM)
+            GPIO.setup(channel,GPIO.OUT,initial=GPIO.LOW)
+            GPIO.output(channel,GPIO.HIGH)
+            print('灯已开启')
+	#        playtomp3('灯已开启')
+            time.sleep(10)
+        if enable==2:
+            enable = alllib.cmdflag
+            channel = 26
+            GPIO.setmode(GPIO.BCM)
+            GPIO.setup(channel,GPIO.OUT,initial=GPIO.LOW)
+            GPIO.output(channel,GPIO.LOW)
+            print("灯已关闭")
