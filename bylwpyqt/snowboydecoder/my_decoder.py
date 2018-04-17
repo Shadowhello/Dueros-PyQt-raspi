@@ -16,7 +16,7 @@ DETECT_DING = "snowboydecoder/resources/ding.wav"
 DETECT_DONG = "snowboydecoder/resources/dong.wav"
 #model = 'resources/smart_mirror.umdl'
 model = "snowboydecoder/resources/xiaoxi.pmdl"
-sensitivity = '0.6'
+sensitivity = '0.5'
 audiogain = 1
 
 detector = snowboydetect.SnowboyDetect(resource_filename=RESOURCE_FILE.encode(), model_str=model.encode())
