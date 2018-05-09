@@ -65,8 +65,11 @@ def dh11func():
 	  alllib.dh11date.append(temperature)
 	  alllib.dh11date.append(humidity)
 	  print("temperature : ", temperature, " C humidity:", humidity, "%")
+	  if humidity == 0:
+		  dh11func()
 	else:
 	  alllib.dh11date.clear()
 	  print("wrong")
+	  dh11func()
 
-	GPIO.cleanup()
+	#GPIO.cleanup()

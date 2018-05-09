@@ -41,18 +41,32 @@ class mywindow(QtWidgets.QWidget):
         if(choice ==0):
             print("0000")
             self.ui.pushButton_1.clicked.emit()
+            #self.ui.pushButton_1.setStyleSheet("QPushButton:pressed{background-color:green}")
         if(choice==1):
             print("1111")
             self.ui.pushButton_2.clicked.emit()
+            #self.ui.pushButton_2.setStyleSheet("QPushButton:pressed{background-color:green}")
         if(choice==2):
             print("222")
             self.ui.pushButton_3.clicked.emit()
+            #self.ui.pushButton_3.setStyleSheet("QPushButton:pressed{background-color:green}")
+            self.ui.pushButton_ding.setStyleSheet("QPushButton:pressed{background-color:gray}")
         if(choice==3):
             print("3333")
             self.ui.pushButton_4.clicked.emit()
+            #self.ui.pushButton_4.setStyleSheet("QPushButton:pressed{background-color:green}")
         if(choice==4):
             print("444")
             self.ui.pushButton_5.clicked.emit()
+            #self.ui.pushButton_5.setStyleSheet("QPushButton:pressed{background-color:green}")
+            
+            
+        if(choice==10):
+            self.ui.pushButton_ding.setStyleSheet("QPushButton{background-color:green}")
+        if(choice==11):
+            self.ui.pushButton_control.setStyleSheet("QPushButton{background-color:gray}")
+        if(choice==12):
+            self.ui.pushButton_control.setStyleSheet("QPushButton{background-color:red}")
     def yuyinshibie(self):
         self.recognizer.start()
 
@@ -76,6 +90,7 @@ class mywindow(QtWidgets.QWidget):
         
     def show1(self,str):
         self.ui.textEdit.setText(alllib.showmsg)
+        self.ui.dh11show.setText(alllib.dh11show)
         pass
 
 

@@ -60,6 +60,7 @@ class AipSpeedsynthesis_Tread(QtCore.QThread):
             alllib.showmsg = alllib.showmsg + '对不起，本次读取失败！'+"\n"
             self.playtomp3('对不起，本次读取失败！')
         else:
+            alllib.dh11show = "温度："+str(alllib.dh11date[0])+"C"+"湿度："+str(alllib.dh11date[1])
             alllib.showmsg = alllib.showmsg + "读取成功，温度："+str(alllib.dh11date[0])+"摄氏度。"+"湿度："+str(alllib.dh11date[1]) + "\n"
             self.playtomp3("读取成功，温度："+str(alllib.dh11date[0])+"摄氏度。"+"湿度："+str(alllib.dh11date[1]))
         pass

@@ -5,3 +5,5 @@ cmdflag = 0				#1 open, 2 close, 3 dhll
 dh11date = []		#获取温度来
 showmsg = "欢迎使用MrSHisd\n"		#显示到界面上的文本框中
 aipspeedflag = 0    #0 null,1 shibiechenggong,2 hecheng
+
+dh11show = ""	#dh11 table
